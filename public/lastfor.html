@@ -1,0 +1,219 @@
+<!-- We don't need full layout here, because this page will be parsed with Ajax-->
+<!-- Top Navbar-->
+<div class="navbar">
+  <div class="navbar-inner">
+    <div class="left">
+      <a href="#" class="back link"> <i class="icon icon-back"></i><span>Back</span></a>
+    </div>
+    <div class="center sliding">How long will it last?</div>
+    <div class="right">
+      <!-- Right link contains only icon - additional "icon-only" class-->
+      <a href="#" class="link icon-only open-panel"> <i class="icon icon-bars"></i></a>
+    </div>
+  </div>
+</div>
+<div class="pages calculator">
+  <!-- Page, data-page contains page name-->
+  <div data-page="form" class="page">
+    <!-- Scrollable page content-->
+    <div class="page-content">
+      <div class="content-block">
+        <!-- Buttons row as tabs controller -->
+        <div class="buttons-row">
+          <!-- Link to 1st tab, active -->
+          <a href="#tab1" class="tab-link active button">Micrograms - mcg</a>
+          <!-- Link to 2nd tab -->
+          <a href="#tab2" class="tab-link button">ml</a>
+        </div>
+      </div>
+      <div class="tabs">
+        <!-- Tab 1, Active default -->
+        <div id="tab1" class="tab active">
+          <div class="content-block" id="lastfor-mcg">
+            <div class="list-block">
+              <ul>
+                <li>
+                  <div class="item-content">
+                    <div class="item-inner">
+                      <div class="item-title label app-label-left">Total amount of Peptide in Vial:</div>
+                      <div class="item-input">
+                        <input type="number" id="mcg-1" placeholder="">
+                      </div>
+                      <div class="item-title label app-label-right-small">mcg</div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="item-content">
+                    <div class="item-inner">
+                      <div class="item-title label app-label-left">Amount being used per injection:</div>
+                      <div class="item-input">
+                        <input type="number" id="mcg-2" placeholder="">
+                      </div>
+                      <div class="item-title label app-label-right-small">mcg</div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="content-block-title">Result</div>
+            <div class="list-block">
+              <ul>
+                <li>
+                  <div class="item-content">
+                    <div class="item-inner">
+                      <div class="item-title label">You will get</div>
+                      <div class="item-input">
+                        <input type="number" id="mcg-3" placeholder="">
+                      </div>
+                      <div class="item-title label app-label-right">injections per Vial</div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="list-block">
+              <ul>
+                <li>
+                  <div class="item-content">
+                    <div class="item-inner">
+                      <div class="item-title label app-label-left">How many injections per day</div>
+                      <div class="item-input">
+                        <input type="number" id="mcg-4" placeholder="">
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="content-block-title">Result</div>
+            <div class="list-block">
+              <ul>
+                <li>
+                  <div class="item-content">
+                    <div class="item-inner">
+                      <div class="item-title label app-label-left">This vial will last for</div>
+                      <div class="item-input">
+                        <input type="number" id="mcg-days" placeholder="">
+                      </div>
+                      <div class="item-title label app-label-right-small">days</div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="list-block inset">
+            <ul>
+              <li>
+                <a href="#" onclick="CalcMCG();" class="item-link list-button">Calculate</a>
+              </li>
+              <li>
+                <a href="#" onclick="ResetMCG();" class="item-link list-button">Reset Values</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- Tab 2 -->
+        <div id="tab2" class="tab">
+          <div class="content-block" id="lastfor-ml">
+            <div class="list-block">
+              <ul>
+                <li>
+                  <div class="item-content">
+                    <div class="item-inner">
+                      <div class="item-title label app-label-left">Total amount of Peptide in Vial:</div>
+                      <div class="item-input">
+                        <input type="number" id="ml-1" placeholder="">
+                      </div>
+                      <div class="item-title label app-label-right-small">mcg</div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="item-content">
+                    <div class="item-inner">
+                      <div class="item-title label app-label-left">Amount of bac water placed in Vial:</div>
+                      <div class="item-input">
+                        <input type="number" id="ml-2" placeholder="">
+                      </div>
+                      <div class="item-title label app-label-right-small">ml</div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="item-content">
+                    <div class="item-inner">
+                      <div class="item-title label app-label-left">Amount being injected:</div>
+                      <div class="item-input">
+                        <input type="number" id="ml-3" placeholder="">
+                      </div>
+                      <div class="item-title label app-label-right-med">tick marks</div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="content-block-title">Result</div>
+            <div class="list-block">
+              <ul>
+                <li>
+                  <div class="item-content">
+                    <div class="item-inner">
+                      <div class="item-title label">You will get</div>
+                      <div class="item-input">
+                        <input type="number" id="ml-4" placeholder="">
+                      </div>
+                      <div class="item-title label app-label-right">injections per Vial</div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="list-block">
+              <ul>
+                <li>
+                  <div class="item-content">
+                    <div class="item-inner">
+                      <div class="item-title label app-label-left">How many injections per day</div>
+                      <div class="item-input">
+                        <input type="number" id="ml-5" placeholder="">
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="content-block-title">Result</div>
+            <div class="list-block">
+              <ul>
+                <li>
+                  <div class="item-content">
+                    <div class="item-inner">
+                      <div class="item-title label">This vial will last for</div>
+                      <div class="item-input">
+                        <input type="number" id="ml-days" placeholder="">
+                      </div>
+                      <div class="item-title label app-label-right-small">days</div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="list-block inset">
+            <ul>
+              <li>
+                <a href="#" onclick="Calcml();" class="item-link list-button">Calculate</a>
+              </li>
+              <li>
+                <a href="#" onclick="Resetml();" class="item-link list-button">Reset Values</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--End Page Content-->
+  </div>
+</div>

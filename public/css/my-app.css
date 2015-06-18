@@ -1,0 +1,17 @@
+.app-label-left {
+	width: 65% !important;
+}
+
+.app-label-right {
+	text-align: right;
+}
+
+.app-label-right-small {
+	text-align: right;
+	width: 12% !important;
+}
+
+.app-label-right-med {
+	text-align: right;
+	width: 26% !important;
+}

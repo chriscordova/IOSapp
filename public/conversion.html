@@ -1,0 +1,125 @@
+<!-- We don't need full layout here, because this page will be parsed with Ajax-->
+<!-- Top Navbar-->
+<div class="navbar">
+  <div class="navbar-inner">
+    <div class="left">
+      <a href="#" class="back link"> <i class="icon icon-back"></i><span>Back</span></a>
+    </div>
+    <div class="center sliding">Conversions</div>
+    <div class="right">
+      <!-- Right link contains only icon - additional "icon-only" class-->
+      <a href="#" class="link icon-only open-panel"> <i class="icon icon-bars"></i></a>
+    </div>
+  </div>
+</div>
+<div class="pages calculator">
+  <!-- Page, data-page contains page name-->
+  <div data-page="form" class="page">
+    <!-- Scrollable page content-->
+    <div class="page-content" id="conversion-content">
+      <div class="content-block-title">Milligrams (MG) to Micrograms (MCG or ug)</div>
+      <div class="list-block">
+        <ul>
+          <li>
+            <div class="item-content">
+              <div class="item-inner">
+                <div class="item-input">
+                  <input type="number" id="MGtoMCG" placeholder="1">
+                </div>
+                <div class="item-title label">MG =</div>
+              </div>
+            </div>
+            <div class="item-content">
+              <div class="item-inner">
+                <div class="item-input">
+                  <input type="number" id="MCGResult" placeholder="1000">
+                </div>
+                <div class="item-title label">MCG (or ug)</div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="content-block-title">Micrograms (MCG or ug) to Milligrams (MG)</div>
+      <div class="list-block">
+        <ul>
+          <li>
+            <div class="item-content">
+              <div class="item-inner">
+                <div class="item-input">
+                  <input type="number" id="MCGtoMG" placeholder="1000">
+                </div>
+                <div class="item-title label">MG =</div>
+              </div>
+            </div>
+            <div class="item-content">
+              <div class="item-inner">
+                <div class="item-input">
+                  <input type="number" id="MGResult"  placeholder="1">
+                </div>
+                <div class="item-title label">MCG (or ug)</div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="content-block-title">Milliliters (mL) to Microliters (uL)</div>
+      <div class="list-block">
+        <ul>
+          <li>
+            <div class="item-content">
+              <div class="item-inner">
+                <div class="item-input">
+                  <input type="number" id="mLtouL" placeholder="0.01">
+                </div>
+                <div class="item-title label">mL =</div>
+              </div>
+            </div>
+            <div class="item-content">
+              <div class="item-inner">
+                <div class="item-input">
+                  <input type="number" id="uLResult" placeholder="10">
+                </div>
+                <div class="item-title label">uL</div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="content-block-title">Microliters (uL) to Milliliters (mL)</div>
+      <div class="list-block">
+        <ul>
+          <li>
+            <div class="item-content">
+              <div class="item-inner">
+                <div class="item-input">
+                  <input type="number" id="uLtomL" placeholder="1000">
+                </div>
+                <div class="item-title label">uL =</div>
+              </div>
+            </div>
+            <div class="item-content">
+              <div class="item-inner">
+                <div class="item-input">
+                  <input type="number" id="mLResult"  placeholder="1">
+                </div>
+                <div class="item-title label">mL</div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="list-block inset">
+        <ul>
+          <li>
+            <a href="#" id="CalcConversion" onclick="CalcConvert();" class="item-link list-button">Convert</a>
+          </li>
+          <li>
+            <a href="#" id="CalcRest" onclick="CalcReset();" class="item-link list-button">Reset Values</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!--End Page Content-->
+  </div>
+</div>

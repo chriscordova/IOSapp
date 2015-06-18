@@ -1,0 +1,175 @@
+<!-- We don't need full layout here, because this page will be parsed with Ajax-->
+<!-- Top Navbar-->
+<div class="navbar">
+  <div class="navbar-inner">
+    <div class="left">
+      <a href="#" class="back link"> <i class="icon icon-back"></i><span>Back</span></a>
+    </div>
+    <div class="center sliding">Calculator</div>
+    <div class="right">
+      <!-- Right link contains only icon - additional "icon-only" class-->
+      <a href="#" class="link icon-only open-panel"> <i class="icon icon-bars"></i></a>
+    </div>
+  </div>
+</div>
+<div class="pages calculator">
+  <!-- Page, data-page contains page name-->
+  <div data-page="form" class="page">
+    <!-- Scrollable page content-->
+    <div class="page-content" id="calculator-content">
+      <div class="content-block-title">Step 1</div>
+      <div class="list-block">
+        <ul>
+          <li>
+            <div class="item-content">
+              <div class="item-inner">
+                <div class="item-title label app-label-left">Syringe Vol</div>
+                <div class="item-input">
+                  <select id="syringeVol">
+                    <option>1</option>
+                    <option>0.3</option>
+                    <option>0.5</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="item-content">
+              <div class="item-inner">
+                <div class="item-title label app-label-left">Syringe has..</div>
+                <div class="item-input">
+                  <input type="number" id="sUnits" placeholder="Units">
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="item-content">
+              <div class="item-inner">
+                <div class="item-title label app-label-left">Units Per Tick</div>
+                <div class="item-input">
+                  <input type="number" id="tUnits" placeholder="">
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="item-content">
+              <div class="item-inner">
+                <div class="item-title label app-label-left">Syringe has..</div>
+                <div class="item-input">
+                  <input type="number" id="numTicks" placeholder="Tickmarks">
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="content-block-title">Step 2</div>
+      <div class="list-block">
+        <ul>
+          <li>
+            <div class="item-content">
+              <div class="item-inner">
+                <div class="item-title label app-label-left">Peptide MG</div>
+                <div class="item-input">
+                  <input type="number" id="peptideMG" placeholder="">
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="content-block-title">Step 3</div>
+      <div class="list-block">
+        <ul>
+          <li>
+            <div class="item-content">
+              <div class="item-inner">
+                <div class="item-title label app-label-left">Bacteriostatic Water mL</div>
+                <div class="item-input">
+                  <input type="number" id="bactWaterML" placeholder="">
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="content-block-title">Step 4</div>
+      <div class="list-block">
+        <ul>
+          <li>
+            <div class="item-content">
+              <div class="item-inner">
+                <div class="item-title label">I want a..</div>
+                <div class="item-input">
+                  <input type="number" id="dose" placeholder="">
+                </div>
+                <div class="item-title label app-label-right">mcg dose,</div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="item-content">
+              <div class="item-inner">
+                <div class="item-title label">or</div>
+                <div class="item-input">
+                  <input type="number" id="IUs" placeholder="">
+                </div>
+                <div class="item-title label app-label-right">IU's,</div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="item-content">
+              <div class="item-inner">
+                <div class="item-title label app-label-left">or draw up to tick mark #</div>
+                <div class="item-input">
+                  <input type="number" id="drawMark" placeholder="">
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+        <div class="content-block-title">Results</div>
+        <div class="list-block">
+          <ul>
+            <li>
+              <div class="item-content">
+                <div class="item-inner">
+                  <div class="item-title label">Each unit has:</div>
+                  <div class="item-input">
+                    <input type="number" id="mcgPerUnit" placeholder="" disabled>
+                  </div>
+                  <div class="item-title label app-label-right">mcg of peptide</div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="item-content">
+                <div class="item-inner">
+                  <div class="item-title label">Each tick mark has:</div>
+                  <div class="item-input">
+                    <input type="number" id="mcgPerTick" placeholder="" disabled>
+                  </div>
+                  <div class="item-title label app-label-right">mcg of peptide</div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="list-block inset">
+        <ul>
+          <li>
+            <a href="#" onclick="CalcValues();" class="item-link list-button">Calculate</a>
+          </li>
+          <li>
+            <a href="#" onclick="CalcResetValues();" class="item-link list-button">Reset Values</a>
+          </li>
+        </ul>
+      </div>
+      <!--End Page Content-->
+    </div>
+  </div>
